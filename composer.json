@@ -1,5 +1,5 @@
 {
-    "name": "jbzoo/composer-cleanup",
+    "name": "hyper-pc/composer-cleanup",
     "type": "composer-plugin",
     "description": "A composer cleanup plugin, to remove tests and documentation to save space",
     "license": "MIT",
@@ -11,6 +11,10 @@
         {
             "name": "Barry vd. Heuvel",
             "email": "barryvdh@gmail.com"
+        },
+        {
+            "name": "Kalistratov Sergey",
+            "email": "kalistratov.s.m@gmail.com"
         }
     ],
 
@@ -20,13 +24,13 @@
 
     "autoload": {
         "psr-4": {
-            "JBZoo\\Composer\\Cleanup\\": "src"
+            "HyperPc\\Composer\\Cleanup\\": "src"
         }
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"
         },        
-        "class": "JBZoo\\Composer\\Cleanup\\Plugin"
+        "class": "HyperPc\\Composer\\Cleanup\\Plugin"
     }
 }

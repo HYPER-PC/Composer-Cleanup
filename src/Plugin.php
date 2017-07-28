@@ -1,33 +1,33 @@
 <?php
 /**
- * JBZoo Composer Cleanup Plugin
+ * HYPERPC - The shop of powerful computers.
  *
- * This file is part of the JBZoo CCK package.
+ * This file is part of the HYPERPC package.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package   JBZoo\Composer\Cleanup
- * @license   MIT
- * @copyright Copyright (C) JBZoo.com,  All rights reserved.
- * @link      https://github.com/JBZoo/Composer-Cleanup
- * @author    Denis Smetannikov <denis@jbzoo.com>
+ * @package     HYPERPC
+ * @license     Proprietary
+ * @copyright   Proprietary https://hyperpc.ru/license
+ * @link        https://github.com/HYPER-PC/Composer-Cleanup".
+ * @author      Sergey Kalistratov <kalistratov.s.m@gmail.com>
  */
 
-namespace JBZoo\Composer\Cleanup;
+namespace HyperPc\Composer\Cleanup;
 
 use Composer\Composer;
-use Composer\EventDispatcher\EventSubscriberInterface;
 use Composer\IO\IOInterface;
-use Composer\Plugin\PluginInterface;
+use Composer\Util\Filesystem;
 use Composer\Script\ScriptEvents;
 use Composer\Script\PackageEvent;
 use Composer\Script\CommandEvent;
-use Composer\Util\Filesystem;
 use Composer\Package\BasePackage;
+use Composer\Plugin\PluginInterface;
+use Composer\EventDispatcher\EventSubscriberInterface;
 
 /**
  * Class Plugin
- * @package JBZoo\Composer\Cleanup
+ * @package HyperPc\Composer\Cleanup
  *
  * @SuppressWarnings(PHPMD.ShortVariable)
  * @SuppressWarnings(PHPMD.UnusedFormalParameter)

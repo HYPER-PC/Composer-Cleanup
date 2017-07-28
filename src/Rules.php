@@ -1,34 +1,37 @@
 <?php
 /**
- * JBZoo Composer Cleanup Plugin
+ * HYPERPC - The shop of powerful computers.
  *
- * This file is part of the JBZoo CCK package.
+ * This file is part of the HYPERPC package.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package   JBZoo\Composer\Cleanup
- * @license   MIT
- * @copyright Copyright (C) JBZoo.com,  All rights reserved.
- * @link      https://github.com/JBZoo/Composer-Cleanup
- * @author    Denis Smetannikov <denis@jbzoo.com>
+ * @package     HYPERPC
+ * @license     Proprietary
+ * @copyright   Proprietary https://hyperpc.ru/license
+ * @link        https://github.com/HYPER-PC/Composer-Cleanup".
+ * @author      Sergey Kalistratov <kalistratov.s.m@gmail.com>
  */
 
-namespace JBZoo\Composer\Cleanup;
+namespace HyperPc\Composer\Cleanup;
 
 /**
  * Class Rules
- * @package JBZoo\Composer\Cleanup
+ *
+ * @package HyperPc\Composer\Cleanup
  */
 class Rules
 {
+
     /**
-     * Rule list
+     * Rule list.
+     *
      * @return array
      */
     public static function getRules()
     {
         // Default patterns for common files
-        $docs = array(
+        $docs = [
             'LICENSE*',
             'README*',
             'readme*',
@@ -46,9 +49,9 @@ class Rules
             'doc',
             'docs',
             'readme*',
-        );
+        ];
 
-        $tests = array(
+        $tests = [
             '.travis.yml',
             '.scrutinizer.yml',
             '.codeclimate.yml',
@@ -68,9 +71,9 @@ class Rules
 
             'demo.php',
             'test.php',
-        );
+        ];
 
-        $system = array(
+        $system = [
             '.gitignore',
             '.idea',
             '.git',
@@ -80,44 +83,50 @@ class Rules
             'pimple.json',
             '.editorconfig',
             'Makefile'
-        );
+        ];
 
-        return array(
+        return [
             // JBZoo pack
-            'jbzoo/assets'               => array($docs, $tests, $system),
-            'jbzoo/console'              => array($docs, $tests, $system),
-            'jbzoo/crosscms'             => array($docs, $tests, $system),
-            'jbzoo/data'                 => array($docs, $tests, $system),
-            'jbzoo/event'                => array($docs, $tests, $system),
-            'jbzoo/html'                 => array($docs, $tests, $system),
-            'jbzoo/image'                => array($docs, $tests, $system, ['build']),
-            'jbzoo/less'                 => array($docs, $tests, $system),
-            'jbzoo/lang'                 => array($docs, $tests, $system),
-            'jbzoo/path'                 => array($docs, $tests, $system),
-            'jbzoo/pimpledumper'         => array($docs, $tests, $system),
-            'jbzoo/profiler'             => array($docs, $tests, $system),
-            'jbzoo/simpletypes'          => array($docs, $tests, $system),
-            'jbzoo/sqlbuilder'           => array($docs, $tests, $system),
-            'jbzoo/utils'                => array($docs, $tests, $system),
+            'jbzoo/assets'               => [$docs, $tests, $system],
+            'jbzoo/console'              => [$docs, $tests, $system],
+            'jbzoo/crosscms'             => [$docs, $tests, $system],
+            'jbzoo/data'                 => [$docs, $tests, $system],
+            'jbzoo/event'                => [$docs, $tests, $system],
+            'jbzoo/html'                 => [$docs, $tests, $system],
+            'jbzoo/image'                => [$docs, $tests, $system, ['build']],
+            'jbzoo/less'                 => [$docs, $tests, $system],
+            'jbzoo/lang'                 => [$docs, $tests, $system],
+            'jbzoo/path'                 => [$docs, $tests, $system],
+            'jbzoo/pimpledumper'         => [$docs, $tests, $system],
+            'jbzoo/profiler'             => [$docs, $tests, $system],
+            'jbzoo/simpletypes'          => [$docs, $tests, $system],
+            'jbzoo/sqlbuilder'           => [$docs, $tests, $system],
+            'jbzoo/utils'                => [$docs, $tests, $system],
 
-            'jbzoo/jbdump'               => array($docs, $tests, $system, [
+            'jbzoo/jbdump'               => [$docs, $tests, $system, [
                 'joomla', 'logs', 'tools', '_template.php', 'favicon.ico', 'htaccess.example',
                 'index.php', 'init.php.example', 'styles.less',
-            ]),
+            ]],
 
             // Others
-            'symfony/yaml'              => array($docs, $tests, $system),
-            'symfony/css-selector'      => array($docs, $tests, $system),
-            'symfony/polyfill-mbstring' => array($docs, $tests, $system),
-            'symfony/process'           => array($docs, $tests, $system),
-            'symfony/console'           => array($docs, $tests, $system),
-             
-            'oyejorge/less.php'          => array($docs, $tests, $system, ['bin']),
-            'abeautifulsite/simpleimage' => array($docs, $tests, $system),
-            'pimple/pimple'              => array($docs, $tests, $system, ['ext', 'src/Pimple/Tests']),
+            'symfony/yaml'              => [$docs, $tests, $system],
+            'symfony/css-selector'      => [$docs, $tests, $system],
+            'symfony/polyfill-mbstring' => [$docs, $tests, $system],
+            'symfony/process'           => [$docs, $tests, $system],
+            'symfony/console'           => [$docs, $tests, $system],
+            'symfony/var-dumper'        => [$docs, $tests, $system],
+
+            'dompdf/dompdf'             => [$docs, $tests, $system],
+            'phenx/php-font-lib'        => [$docs, $tests, $system],
+            'phenx/php-svg-lib'         => [$docs, $tests, $system],
+            'sabberworm/php-css-parser' => [$docs, $tests, $system],
+
+            'oyejorge/less.php'          => [$docs, $tests, $system, ['bin']],
+            'abeautifulsite/simpleimage' => [$docs, $tests, $system],
+            'pimple/pimple'              => [$docs, $tests, $system, ['ext', 'src/Pimple/Tests']],
 
             // System
-            'jbzoo/composer-cleanup'     => array($docs, $tests, $system),
-        );
+            'jbzoo/composer-cleanup'     => [$docs, $tests, $system],
+        ];
     }
 }
